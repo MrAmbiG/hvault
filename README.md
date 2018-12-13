@@ -45,8 +45,8 @@ approlename = 'ansible'
 location = 'v1/secret/app-credentials/data/test'
 JSON_DATA_CONTENT = '{ "batman": "wayne", "superman": "kent" }'
     - Read  
-    obj = hashivault().get_secret(approlename, location)
+    obj = hashivault().get_secret(approlename, location)  
     print obj
     - write  
-    obj = hashivault().set_secret(approlename, location, JSON_DATA_CONTENT)
+    obj = hashivault().set_secret(approlename, location, JSON_DATA_CONTENT)  
     print obj
