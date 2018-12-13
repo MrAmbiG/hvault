@@ -26,7 +26,7 @@ setup. This is designed for the following setup/design of hashicorp's vault.
 - VAULT_TOKEN - vault token for the approle
 - VAULT_ROLE_ID - vault role id for the approle
 
-## How to install
+## How to Use
 * for ansible
 1. Copy hvault.py to the /usr/lib/python2.7/site-packages/ansible/modules/hvault
  or simply clone this repo inside /usr/lib/python2.7/site-packages/ansible/modules/
@@ -44,9 +44,9 @@ setup. This is designed for the following setup/design of hashicorp's vault.
 approlename = 'ansible'
 location = 'v1/secret/app-credentials/data/test'
 JSON_DATA_CONTENT = '{ "batman": "wayne", "superman": "kent" }'
-- Read
-obj = hashivault().get_secret(approlename, location)
-print obj
-- write
-obj = hashivault().set_secret(approlename, location, JSON_DATA_CONTENT)
-print obj
+    - Read  
+    obj = hashivault().get_secret(approlename, location)
+    print obj
+    - write  
+    obj = hashivault().set_secret(approlename, location, JSON_DATA_CONTENT)
+    print obj
