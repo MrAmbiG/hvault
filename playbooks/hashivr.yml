@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: Test that my module works
+      hashivr:
+        approlename: 'ansible'
+        location: 'v1/secret/app-credentials/data/test'
+      register: result
+
+    - debug: msg="{{ result }}"

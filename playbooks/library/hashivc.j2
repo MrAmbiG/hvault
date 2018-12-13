@@ -1,0 +1,14 @@
+- hosts: localhost
+# examples are commented out
+  tasks:
+    - name: Test that my module works
+      hashivc:
+        approlename: {{ approlename }}
+        # approlename: 'ansible'
+        location:  {{ location }}
+        # location: 'v1/secret/app-credentials/data/test'
+        json_data:  {{ json_data }}
+        # json_data:  { "foo": "bar1", "food": "pizza" }'
+      register: result
+
+    - debug: msg="{{ result }}"
